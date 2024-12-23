@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+      # Step 2: Set up your environment (e.g., Node.js, Python, Terraform)
+    - name: Set up [your environment]
+      run: [commands or actions]
+      
+      # Step 3: Run tests or validations
+    - name: Run tests
+      run: [commands]
+
+      # Step 4: Build, deploy, or other operations
+    - name: Deploy (optional)
+      run: [commands]
